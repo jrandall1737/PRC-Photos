@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { getComponent } from '../../../node_modules/@angular/core/src/linker/component_factory_resolver';
 
+const numPhotos = 17;
 @Component({
   selector: 'app-photo-grid',
   templateUrl: './photo-grid.component.html',
@@ -15,16 +16,12 @@ export class PhotoGridComponent implements OnInit {
   }
 
   private loadPhotots() {
-    const myElement = document.getElementById('photo-grid');
+    let myElement = document.getElementById('photo-grid');
 
-    for (let i = 1743; i < 1751; i++) {
-      const photoHtml = document.createElement('div');
-      photoHtml.className = 'w3-col s4 w3-center';
-      photoHtml.innerHTML =
-        `
-      <img src="/assets/HoodNationalForest/IMG_${i}.JPG" style="width:100%">
-      `;
-      myElement.appendChild(photoHtml);
+    for (let i = 0; i < numPhotos; i++) {
+      myElement = document.getElementById(`col-${i % 3}`);
+      myElement.innerHTML +=
+          `<img src="/assets/HoodNationalForest/IMG_${i}.JPG" style="width:100%">`;
     }
 
     const xmlHttp = new XMLHttpRequest();
