@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod --base-href https://jrandall1737.github.io/PRC-Photos",
+    "launch": "ngh",
+    "deploy": "npm run build:prod && ngh",
     "renamePhotos": "node renameImages.js",
     "test": "ng test"
   },
