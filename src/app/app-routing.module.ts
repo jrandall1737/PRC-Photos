@@ -5,7 +5,7 @@ import { PhotoGridComponent } from './photo-grid/photo-grid.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/photo-grid', pathMatch: 'full' },
+  { path: '', redirectTo: 'photo-grid', pathMatch: 'full' },
   { path: 'photo-grid', component: PhotoGridComponent },
   { path: 'about', component: AboutComponent, },
 ];

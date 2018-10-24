@@ -21,7 +21,7 @@ export class PhotoGridComponent implements OnInit {
     for (let i = 0; i < numPhotos; i++) {
       myElement = document.getElementById(`col-${i % 3}`);
       myElement.innerHTML +=
-          `<img src="/assets/HoodNationalForest/IMG_${i}.JPG" style="width:100%">`;
+          `<img src="assets/HoodNationalForest/IMG_${i}.JPG" style="width:100%">`;
     }
 
     const xmlHttp = new XMLHttpRequest();
